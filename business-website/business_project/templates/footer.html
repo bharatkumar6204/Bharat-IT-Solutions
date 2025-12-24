@@ -1,0 +1,72 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Page</title>
+</head>
+<body>
+
+    
+<!--footer section -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Company Info -->
+    <div class="footer-box">
+      <h3>Bharat IT,Solutions</h3>
+      <p>
+        We provide professional digital solutions to help businesses
+        grow and succeed online.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-box">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'services' %}">Services</a></li>
+        <li><a href="{% url 'project' %}">Projects</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Services -->
+    <div class="footer-box">
+      <h4>Our Services</h4>
+      <ul>
+        <li><a href="{% url 'services' %}">Web Development</a></li>
+        <li><a href="{% url 'services' %}">UI / UX Design</a></li>
+        <li><a href="{% url 'services' %}">Digital Marketing</a></li>
+        <li><a href="{% url 'services' %}">Cloud Solutions</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-box">
+      <h4>Contact Us</h4>
+      <p>📍 Mithapur, Patna, Bihar – 800001, India </p>
+      <p>📧 bbharatkusavansi@gmail.com </p>
+      <p>📞 +91 62043 54465</p>
+    </div>
+
+  </div>
+
+  <!-- Bottom -->
+  <div class="footer-bottom">
+    <p>© 2025 Bharat IT,Solutions. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script src="{% static 'js/script.js' %}"></script>
+
+
+</body>
+</html>
+    
+</body>
+</html>

@@ -1,0 +1,73 @@
+{% include "header.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get_quote Page</title>
+</head>
+<body>
+
+    
+<!--GET QUOTE-->
+
+<section class="quote">
+  <div class="quote-container">
+
+    <!-- Left Content -->
+    <div class="quote-info">
+      <span class="quote-tag">Get a Quote</span>
+      <h2>Request a <span>Free Quote</span></h2>
+      <p>
+        Tell us about your project and we’ll provide you with
+        a customized quote that fits your business needs.
+      </p>
+
+      <ul class="quote-points">
+        <li>✔ Free Consultation</li>
+        <li>✔ Transparent Pricing</li>
+        <li>✔ Quick Response</li>
+        <li>✔ Professional Team</li>
+      </ul>
+    </div>
+
+    <!-- Quote Form -->
+    <div class="quote-form">
+
+      <form method="post">
+        {% csrf_token %}
+        <div class="form-row">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+        </div>
+
+        <div class="form-row">
+          <input type="tel" name="phone" placeholder="Phone Number" required>
+          <select name="service" required>
+            <option value=\"\">Select Service</option>
+            <option>Web Development</option>
+            <option>UI / UX Design</option>
+            <option>Digital Marketing</option>
+            <option>Software Development</option>
+          </select>
+        </div>
+        <textarea name="details" placeholder="Project Details" rows="4" required></textarea>
+        <button type="submit" class="btn">Get Quote</button>
+      </form>
+     
+    </div>
+    {% if messages %}
+  {% for message in messages %}
+    <script>
+      alert("{{ message }}");
+    </script>
+  {% endfor %}
+{% endif %}
+
+  </div>
+</section>
+    
+</body>
+</html>
+{% include "footer.html" %}

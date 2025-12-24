@@ -1,0 +1,96 @@
+{% include "header.html" %} {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Page</title>
+  </head>
+  <body>
+    <!--contact-->
+    <section class="contact">
+      <div class="contact-container">
+        <!-- Header -->
+        <div class="contact-header">
+          <span class="contact-tag">Contact Us</span>
+          <h2>Get In <span>Touch</span></h2>
+          <p>
+            Have any questions or want to work with us? Feel free to contact us
+            anytime.
+          </p>
+        </div>
+
+        <!-- Contact Content -->
+        <div class="contact-content">
+          <!-- Contact Info -->
+          <div class="contact-info">
+            <div class="info-box">
+              <span>📍</span>
+              <h4>Address</h4>
+              <p>Mithapur, Patna, Bihar – 800001, India</p>
+            </div>
+
+            <div class="info-box">
+              <span>📧</span>
+              <h4>Email</h4>
+              <p>bbharatkusavansi@gmail.com</p>
+            </div>
+
+            <div class="info-box">
+              <span>📞</span>
+              <h4>Phone</h4>
+              <p>+91 62043 54465</p>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form">
+            <form action="{% url 'saveform' %}" method="post">
+              {% csrf_token %}
+              <div class="form-row">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+
+              <input
+                type="text"
+                name="subject"
+                placeholder="Subject"
+                required
+              />
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                rows="5"
+                required
+              ></textarea>
+
+              <button type="submit" class="btn">Send Message</button>
+            </form>
+          </div>
+
+          {% if messages %}
+  {% for message in messages %}
+    <script>
+      alert("{{ message }}");
+    </script>
+  {% endfor %}
+{% endif %}
+
+          
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+{% include "footer.html" %}

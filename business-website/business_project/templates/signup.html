@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Login Page</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="signup-box">
+        <h2>Create Account</h2>
+
+        <form action="" method="post" >
+          {% csrf_token %}
+
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" name="username" placeholder="Enter your name" required />
+          </div>
+
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="useremail" placeholder="Enter your email" required />
+          </div>
+
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" name="userpass1" placeholder="Enter password" required />
+          </div>
+
+          <div class="form-group">
+            <label>Confirm Password</label>
+            <input type="password" name="userpass2" placeholder="Confirm password" required />
+          </div>
+
+          <button class="btn" type="submit">Sign Up</button>
+        </form>
+
+        <div class="login-link">
+          Already have an account? <a href="{% url 'login' %}">Login</a>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

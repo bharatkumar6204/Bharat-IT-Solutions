@@ -1,0 +1,44 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Business Navbar</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-container">
+    
+    <!-- Logo -->
+    <div class="logo">
+      <a href="{% url 'project' %}">Bharat IT,Solutions</a>
+    </div>
+
+    <!-- Menu Toggle (Mobile) -->
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">
+      ☰
+    </label>
+
+    <!-- Menu -->
+    <ul class="nav-menu">
+      <li><a href="{% url 'home' %}">Home</a></li>
+      <li><a href="{% url 'about' %}">About</a></li>
+      <li><a href="{% url 'services' %}">Services</a></li>
+      <li><a href="{% url 'project' %}">Projects</a></li>
+      <li><a href="{% url 'contact' %}">Contact</a></li>
+      <li><a href="{% url 'getquote' %}" class="btn-nav">Get Quote</a></li>
+      <a href="{% url 'logout' %}" style="color: white; margin-left: 20px; font-size: 17px;" >Logout</a>
+      
+    </ul>
+    
+
+  </div>
+</nav>
+    
+</body>
+</html>

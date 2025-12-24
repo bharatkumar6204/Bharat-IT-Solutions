@@ -1,0 +1,49 @@
+{% include "header.html" %}
+{% load static %}
+
+
+       
+<!--about section-->
+
+<section class="about">
+  <div class="about-container">
+
+    <!-- Left Image -->
+    <div class="about-image">
+      <img src="{% static 'images/about.jpg' %}" alt="About Company">
+    </div>
+
+    <!-- Right Content -->
+    <div class="about-content">
+      <span class="about-tag">About Our Company</span>
+
+      <h2>
+        We Are A Creative <span>Digital Agency</span>
+      </h2>
+
+      <p>
+        We help businesses grow by providing modern digital solutions
+        including web development, branding, and marketing strategies.
+      </p>
+
+      <p>
+        Our experienced team focuses on quality, innovation and long-term
+        partnerships to deliver real results.
+      </p>
+
+      <!-- Points -->
+      <ul class="about-points">
+        <li>✔ Professional & Experienced Team</li>
+        <li>✔ High Quality Services</li>
+        <li>✔ Customer Satisfaction</li>
+        <li>✔ Trusted by Many Clients</li>
+      </ul>
+
+      <a href="{% url 'services' %}" class="about-btn">Learn More</a>
+    </div>
+
+  </div>
+</section>
+    
+
+{% include "footer.html" %}
