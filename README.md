@@ -94,7 +94,6 @@ Database: MySQL
 Authentication: Django Authentication System
 
 🔹 Purpose & Impact
-
 The primary goal of this project is to build a secure, scalable, and professional business website that showcases IT services, manages user access, and enables smooth communication between clients and the company.
 
 This project demonstrates practical knowledge of full-stack web development, secure authentication, database handling, and real-world business logic implementation.
